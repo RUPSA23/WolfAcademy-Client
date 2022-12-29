@@ -7,7 +7,7 @@ const Contact = () => {
 
   <section class="mb-32 text-gray-800">
     <div class="flex flex-wrap">
-      <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
+      <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6 dark:bg-white">
         <h2 class="text-3xl font-bold mb-6 text-start">Contact us</h2>
         <p class="text-gray-500 mb-6 text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -21,7 +21,7 @@ const Contact = () => {
       </div>
       <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
         <form>
-          <div className="form-group mb-6">
+          <div className="form-group mb-6 dark:bg-white">
             <input type="text" class="form-control block
               w-full
               px-3

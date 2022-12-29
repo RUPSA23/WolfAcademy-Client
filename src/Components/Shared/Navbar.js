@@ -14,6 +14,9 @@ const Navbar = () => {
               <li><Link to="/allCourses">All Courses</Link></li>
               <li><Link to="/aboutUs">About Us</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/faq">Faq</Link></li>
+              <li><Link to="/login">Login</Link></li>
+            <li><Link to="/register">Register</Link></li>
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl text-white">Wolf Academy</a>
@@ -24,10 +27,11 @@ const Navbar = () => {
             <li><Link to="/allCourses">All Courses</Link></li>
             <li><Link to="/aboutUs">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/faq">Faq</Link></li>
           </ul>
         </div>
-        <div className="navbar-end text-white">
-        <ul className='menu menu-horizontal px-0'>
+        <div className="navbar-end text-white ">
+        <ul className='menu menu-horizontal px-0 invisible lg:visible md:visible'>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/register">Register</Link></li>
         </ul>

@@ -7,7 +7,7 @@ const Login = () => {
 <div>
 
 <section class="h-screen">
-  <div class="px-6 h-full text-gray-800">
+  <div class="px-6 h-full text-gray-800 dark:bg-white">
     <div
       class=" flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
     >
@@ -17,7 +17,7 @@ const Login = () => {
         <img
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
           class="w-full"
-          alt="Sample image"
+          alt="login image"
         />
       </div>
 
@@ -85,7 +85,7 @@ const Login = () => {
               <Link
                 to="/register"
                 class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
-                >Register</Link>
+                > Register</Link>
             </p>
           </div>
         </form>
