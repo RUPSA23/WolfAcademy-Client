@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CourseDetail = () => {
     return (
@@ -19,15 +20,25 @@ const CourseDetail = () => {
                 
                 <div class="mt-3 md:mx-6">
                     <div>
-                        <p class="text-2xl font-medium tracking-tight text-white">Course Title</p>
+                        <p class="text-2xl font-medium tracking-tight text-white">EDUCINE</p>
                         <p class="text-blue-200 text-1xl">Course Instructor</p>
                     </div>
 
-                    <p class="mt-4 text-lg leading-relaxed text-white md:text-xl"> “ Course Detail Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda”.</p>
+                    <p class="mt-4 grid grid-cols-2 text-lg leading-relaxed text-white md:text-xl">
+                 
+                    <li>Market Introduction</li>  
+                    <li>Types of Markets</li>
+                    <li>Technical Trading tools</li>
+                    <li>How to Trade</li>
+                    <li>Demo Account</li>
+                    <li>calculating Profiles</li>
+                   
+                    
+                    </p>
 
                     <p class="text-3xl mt-3 mb-3 font-bold text-white dark:text-white">$599</p>
 
-                    <button type="button" className="px-8 py-3 font-semibold rounded-full bg-white dark:bg-gray-100 dark:text-gray-800 hover:bg-gray-100">Buy This Course</button>
+                    <Link to="/checkoutPage" type="button" className="px-8 py-3 font-semibold rounded-full bg-white dark:bg-gray-100 dark:text-gray-800 hover:bg-gray-100">Buy This Course</Link>
                     
                     <div class="flex items-center justify-between mt-6 md:justify-start">
                     </div>
