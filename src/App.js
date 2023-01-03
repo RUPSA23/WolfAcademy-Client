@@ -8,8 +8,8 @@ import Login from './Components/Login/Login';
 import Register from './Components/Login/Register';
 import Footer from './Components/Shared/Footer';
 import Navbar from './Components/Shared/Navbar';
-import Courses from './Components/Home/Courses';
 import AllCourses from './Components/AllCourses/AllCourses';
+import CourseDetail from './Components/CourseDetail/CourseDetail';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Route path="/faq" element={<Faq></Faq>}></Route>
         <Route path="/aboutUs" element={<KnowMore></KnowMore>}></Route>
         <Route path="/allCourses" element={<AllCourses></AllCourses>}></Route>
+        <Route path="/courseDetail" element={<CourseDetail></CourseDetail>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
       </Routes>
