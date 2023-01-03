@@ -6,8 +6,8 @@ const Footer = () => {
       <div>
        
         <p className="font-bold">
-         Wolf Academy <br />
-          Providing reliable tech since 1992
+        Wolf Academy <br />
+        1009, 10th floor, Weve Silver Tower Sector 18, Noida, UP, 201301
         </p>
         <p>Copyright © 2022 - All right reserved</p>
       </div>
