@@ -15,7 +15,7 @@ import PageNotFound from './Components/PageNotFound/PageNotFound';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark:bg-white">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

@@ -13,7 +13,6 @@ const CheckoutPage = () => {
         <img class="m-2 h-24 w-38 rounded-md border object-cover object-center" src="https://theforbiz.com/wp-content/uploads/2021/12/TutFlix-Learn-any-Course-for-Free.gif" alt="" />
         <div class="flex w-full flex-col px-4 py-4">
           <span class="font-semibold">EDUCINE</span>
-          {/* <span class="float-right text-gray-400">42EU - 8.5US</span> */}
           <p class="text-lg font-bold">$599</p>
         </div>
       </div>

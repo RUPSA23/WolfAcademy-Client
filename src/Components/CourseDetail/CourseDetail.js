@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const CourseDetail = () => {
     return (
         <div>
-            <section class="bg-white dark:bg-gray-900">
+            <section class="bg-white dark:bg-white">
     <div class="max-w-6xl px-6 py-10 mx-auto">
         <p class="text-xl font-medium text-blue-500 ">Check Out</p>
 
-        <h1 class="mt-2 text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">
+        <h1 class="mt-2 text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-gray-800">
             Our Course Detail
         </h1>
 

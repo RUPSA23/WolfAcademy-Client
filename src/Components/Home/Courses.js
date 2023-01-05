@@ -7,7 +7,7 @@ const courses = () => {
     return (
         <div>
         <div className="flex justify-between">
-        <h1 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl mt-4 text-start ml-12 dark:text-white">Check Out Our <span class="text-blue-600 dark:text-blue-500">Best Courses</span></h1>
+        <h1 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl mt-4 text-start ml-12 dark:text-gray-900">Check Out Our <span class="text-blue-600 dark:text-blue-500">Best Courses</span></h1>
         <Link className="btn btn-primary mr-12 mt-5" to="/allCourses">View More</Link>
         </div>
         
