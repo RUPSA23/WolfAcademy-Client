@@ -117,7 +117,7 @@ const Login = () => {
                 {signInError}
             </div>
             
-            <a href="#!" class="text-gray-800">Forgot password?</a>
+            <Link to="/forgotPassword" class="text-gray-800">Forgot password?</Link>
           </div>
 
           <div class="text-center lg:text-left">

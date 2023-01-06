@@ -12,6 +12,7 @@ import AllCourses from './Components/AllCourses/AllCourses';
 import CourseDetail from './Components/CourseDetail/CourseDetail';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
+import ForgotPassword from './Components/Login/ForgotPassword';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/checkoutPage" element={<CheckoutPage></CheckoutPage>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/forgotPassword" element={<ForgotPassword></ForgotPassword>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>

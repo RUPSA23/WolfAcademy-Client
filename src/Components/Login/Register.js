@@ -28,6 +28,7 @@ const Register = () => {
     if(guser){
         navigate('/');
     }
+    
     let signUpError;
     if (error || gError) {
       signUpError = (
