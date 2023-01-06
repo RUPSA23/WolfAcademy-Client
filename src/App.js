@@ -13,6 +13,7 @@ import CourseDetail from './Components/CourseDetail/CourseDetail';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import ForgotPassword from './Components/Login/ForgotPassword';
+import RequireAuth from './Components/Login/RequireAuth';
 
 function App() {
   return (
@@ -25,7 +26,12 @@ function App() {
         <Route path="/aboutUs" element={<KnowMore></KnowMore>}></Route>
         <Route path="/allCourses" element={<AllCourses></AllCourses>}></Route>
         <Route path="/courseDetail" element={<CourseDetail></CourseDetail>}></Route>
-        <Route path="/checkoutPage" element={<CheckoutPage></CheckoutPage>}></Route>
+        <Route path="/checkoutPage" element={
+          <RequireAuth>
+          <CheckoutPage></CheckoutPage>
+          </RequireAuth>
+      
+        }></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/forgotPassword" element={<ForgotPassword></ForgotPassword>}></Route>
