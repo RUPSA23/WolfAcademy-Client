@@ -25,13 +25,13 @@ function App() {
         <Route path="/faq" element={<Faq></Faq>}></Route>
         <Route path="/aboutUs" element={<KnowMore></KnowMore>}></Route>
         <Route path="/allCourses" element={<AllCourses></AllCourses>}></Route>
-        <Route path="/courseDetail" element={<CourseDetail></CourseDetail>}></Route>
-        <Route path="/checkoutPage" element={
+        <Route path="/courseDetail" element={
           <RequireAuth>
-          <CheckoutPage></CheckoutPage>
+           <CourseDetail></CourseDetail>
           </RequireAuth>
       
         }></Route>
+        <Route path="/checkoutPage" element={<CheckoutPage></CheckoutPage>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/forgotPassword" element={<ForgotPassword></ForgotPassword>}></Route>

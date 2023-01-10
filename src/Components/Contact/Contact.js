@@ -1,6 +1,26 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const navigate = useNavigate();
+  const sentEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      'service_qenmnls', 
+      'template_4k72zin', 
+      e.target, 
+      'HMeUxEZOpdFgISvk7').then(res => {
+        console.log(res);
+        alert('Message sent successfully to WolfAcademy');
+        navigate('/');
+        
+      }).catch(err => {
+        console.log(err);
+        alert('Message did not send successfully');
+      })
+
+  }
     return (
         <div>
 <div class="container my-24 px-6 mx-auto">
@@ -15,12 +35,12 @@ const Contact = () => {
           dolorem nisi corrupti eveniet dolores ad maiores repellendus enim
           autem omnis fugiat perspiciatis? Ad, veritatis.
         </p>
-        <p class="text-gray-500 mb-2 text-start">New York, 94126, United States</p>
+        <p class="text-gray-500 mb-2 text-start">1009, 10th floor, Weve Silver Tower Sector 18, Noida, UP, 201301</p>
         <p class="text-gray-500 mb-2 text-start">+ 01 234 567 89</p>
-        <p class="text-gray-500 mb-2 text-start">info@gmail.com</p>
+        <p class="text-gray-500 mb-2 text-start">wolfacademy.queries2023@gmail.com</p>
       </div>
       <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
-        <form>
+        <form onSubmit={sentEmail}>
           <div className="form-group mb-6 dark:bg-white">
             <input type="text" class="form-control block
               w-full
@@ -36,7 +56,9 @@ const Contact = () => {
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
-              placeholder="Name"/>
+              placeholder="Name"
+              name='name'
+              />
           </div>
           <div className="form-group mb-6">
             <input type="email" className="form-control block
@@ -53,7 +75,9 @@ const Contact = () => {
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
-              placeholder="Email address"/>
+              placeholder="Email address"
+              name='email'
+              />
           </div>
           <div className="form-group mb-6">
             <input type="text" className="form-control block
@@ -70,7 +94,9 @@ const Contact = () => {
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
-              placeholder="Subject"/>
+              placeholder="Subject"
+              name='subject'
+              />
           </div>
           <div class="form-group mb-6">
             <textarea className="
@@ -89,8 +115,12 @@ const Contact = () => {
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-            " id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
+            " id="exampleFormControlTextarea13" rows="3" 
+            placeholder="Message"
+            name='message'
+            ></textarea>
           </div>
+
           <button type="submit" className="
             w-full
             px-6
