@@ -11,8 +11,8 @@ const AboutUs = () => {
         </div>
         <div class="md:7/12 lg:w-6/12">
           <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-start">About <span class="text-blue-600 dark:text-blue-500">Us</span></h2>
-          <p class="mt-6 text-gray-600 text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
-          <p class="mt-4 text-gray-600 text-start"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+          <p class="mt-6 text-gray-600 text-start text-xl">We are Online/Offline Trading Academy specializes in educating and training individuals about stocks, Currency, futures, and options.		 </p>
+          <p class="mt-4 text-gray-600 text-start text-xl">Our Trading Academy allows prospective students to sample the program via free courses before committing to its fee based training.</p>
           
         </div>
         

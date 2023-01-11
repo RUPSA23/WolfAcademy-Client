@@ -10,9 +10,9 @@ const AboutUs = () => {
           <img src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png" alt="image" loading="lazy" width="" height=""/>
         </div>
         <div class="md:7/12 lg:w-6/12">
-          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-start">About Us</h2>
-          <p class="mt-6 text-gray-600 text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
-          <p class="mt-4 text-gray-600 text-start"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-start">About <span class="text-blue-600 dark:text-blue-500">Us</span></h2>
+          <p class="mt-6 text-gray-600 text-start text-xl">We are Online/Offline Trading Academy specializes in educating and training individuals about stocks, Currency, futures, and options.</p>
+          <p class="mt-4 text-gray-600 text-start text-xl">Our Trading Academy allows prospective students to sample the program via free courses before committing to its fee based training.</p>
           
         </div>
         
@@ -26,9 +26,9 @@ const AboutUs = () => {
       <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
        
         <div class="md:7/12 lg:w-6/12">
-          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-start">Our Mission</h2>
-          <p class="mt-6 text-gray-600 text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
-          <p class="mt-4 text-gray-600 text-start"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-start">Our <span class="text-blue-600 dark:text-blue-500"> Mission</span></h2>
+          <p class="mt-6 text-gray-600 text-start text-xl">Apply cutting edge technologies and innovative training methodologies to transform aspiring traders to be the best they can be.</p>
+          {/* <p class="mt-4 text-gray-600 text-start"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p> */}
           
         </div>
         <div class="md:5/12 lg:w-5/12">
@@ -46,9 +46,9 @@ const AboutUs = () => {
           <img src="https://thumbs.dreamstime.com/b/vision-bulb-word-cloud-business-concept-60193290.jpg" alt="image" loading="lazy" width="" height=""/>
         </div>
         <div class="md:7/12 lg:w-6/12">
-          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-start">Our Vission</h2>
-          <p class="mt-6 text-gray-600 text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
-          <p class="mt-4 text-gray-600 text-start"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-start">Our <span class="text-blue-600 dark:text-blue-500">Vission</span> </h2>
+          <p class="mt-6 text-gray-600 text-start text-xl">Empowering people with the knowledge of managing their fund And diversifying in allocating the financial funds wih tools according to once needs.</p>
+          <p class="mt-4 text-gray-600 text-start text-xl">To be a leading trading Ed.Tech company, offering the most advanced training solutions tailored for the development of professional traders.</p>
           
         </div>
         

@@ -36,7 +36,7 @@ const Contact = () => {
           autem omnis fugiat perspiciatis? Ad, veritatis.
         </p>
         <p class="text-gray-500 mb-2 text-start">1009, 10th floor, Weve Silver Tower Sector 18, Noida, UP, 201301</p>
-        <p class="text-gray-500 mb-2 text-start">+ 01 234 567 89</p>
+        <p class="text-gray-500 mb-2 text-start">8299620433</p>
         <p class="text-gray-500 mb-2 text-start">wolfacademy.queries2023@gmail.com</p>
       </div>
       <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
