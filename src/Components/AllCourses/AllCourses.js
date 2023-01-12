@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AllCourse from './AllCourse';
 
 const AllCourses = () => {
-    const courses = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // const courses = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const [courses, setCourses] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:4000/allCourses')
+        .then(res => res.json())
+        .then(data => setCourses(data))
+    })
+    
     return (
         <div>
         <h1 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl mt-4 text-start ml-12 dark:gray-900">Check Out Our <span class="text-blue-600 dark:text-blue-500">Best Courses</span></h1>
@@ -10,7 +18,7 @@ const AllCourses = () => {
             {
                 courses.map(course => <AllCourse
                 key={course._id}
-                tool={course}
+                course={course}
                 ></AllCourse>)
             }
          </div>
