@@ -25,7 +25,7 @@ function App() {
         <Route path="/faq" element={<Faq></Faq>}></Route>
         <Route path="/aboutUs" element={<KnowMore></KnowMore>}></Route>
         <Route path="/allCourses" element={<AllCourses></AllCourses>}></Route>
-        <Route path="/courseDetail" element={
+        <Route path="/courseDetail/:id" element={
           <RequireAuth>
            <CourseDetail></CourseDetail>
           </RequireAuth>

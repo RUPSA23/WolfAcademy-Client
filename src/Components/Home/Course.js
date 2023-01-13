@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Course = ({course}) => {
+    const navigate = useNavigate();
+
+    const handleReadMore = id => {
+        navigate(`/courseDetail/${id}`);
+
+    }
  
     return (
         <div>
@@ -27,7 +33,7 @@ const Course = ({course}) => {
         
             {/* <span class="text-2xl font-bold text-gray-900 dark:text-gray-900 ">Best Course</span> */}
 
-            <Link to="/courseDetail" class="text-white ml-16 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Read More</Link>
+            <button class="text-white ml-16 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={() => handleReadMore(course._id)}>Read More</button>
         </div>
     </div>
 </div>

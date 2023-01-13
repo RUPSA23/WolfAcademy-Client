@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AllCourse = (props) => {
-    const {name, img} = props.course;
+    const {name, img, _id} = props.course;
+    const navigate = useNavigate();
+
+    const handleReadMore = id => {
+        navigate(`/courseDetail/${id}`);
+
+    }
     return (
         <div>
         <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-white dark:border-gray-700">
@@ -24,7 +30,7 @@ const AllCourse = (props) => {
         <div class="flex items-center justify-between">
             <span class="text-2xl font-bold text-gray-900 dark:text-gray-900">Best Course</span>
             
-            <Link to="/courseDetail" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Read More</Link>
+            <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={() => handleReadMore(_id)}>Read More</button>
         </div>
     </div>
 </div>
