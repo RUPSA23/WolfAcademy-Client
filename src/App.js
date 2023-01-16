@@ -14,8 +14,33 @@ import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import ForgotPassword from './Components/Login/ForgotPassword';
 import RequireAuth from './Components/Login/RequireAuth';
+import PhoneAuth from './Components/Login/PhoneAuth';
+import firebase from 'firebase/compat/app'; 
+import { useEffect, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
 
 function App() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyB1Fo5nfryMs5KGsgxhGBEWzJBk1crpZ8w",
+    authDomain: "wolf-academy-project.firebaseapp.com",
+    projectId: "wolf-academy-project",
+    storageBucket: "wolf-academy-project.appspot.com",
+    messagingSenderId: "396863197565",
+    appId: "1:396863197565:web:63244d0184b37040befc14"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  const [User, setUser] = useState(null);
+
+  useEffect(()=>{
+    const unRegistered = onAuthStateChanged(firebase.auth(), (currentUser)=>{
+    console.log(currentUser);
+    setUser(currentUser);
+    })
+  return ()=> unRegistered();
+      })
+
+
   return (
     <div className="App dark:bg-white">
       <Navbar></Navbar>
@@ -25,6 +50,7 @@ function App() {
         <Route path="/faq" element={<Faq></Faq>}></Route>
         <Route path="/aboutUs" element={<KnowMore></KnowMore>}></Route>
         <Route path="/allCourses" element={<AllCourses></AllCourses>}></Route>
+        <Route path="/phoneAuth" element={<PhoneAuth auth={firebase.auth()}></PhoneAuth>}></Route>
         <Route path="/courseDetail/:id" element={
           <RequireAuth>
            <CourseDetail></CourseDetail>

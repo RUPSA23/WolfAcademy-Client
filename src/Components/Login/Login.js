@@ -30,7 +30,8 @@ const Login = () => {
     navigate(from, { replace: true });
   }
   if (gUser) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
+    navigate('/phoneAuth');
   }
 
   

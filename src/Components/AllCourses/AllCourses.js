@@ -6,7 +6,7 @@ const AllCourses = () => {
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/allCourses')
+        fetch('https://wolfacademy-server-rupsa23.onrender.com/allCourses')
         .then(res => res.json())
         .then(data => setCourses(data))
     })

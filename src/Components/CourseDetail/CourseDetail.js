@@ -6,7 +6,7 @@ const CourseDetail = () => {
     const [course, setCourse] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:4000/course/${id}`;
+        const url = `https://wolfacademy-server-rupsa23.onrender.com/course/${id}`;
         fetch(url)
           .then((res) => res.json())
           .then((data) => {
