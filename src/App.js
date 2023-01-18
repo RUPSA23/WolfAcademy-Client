@@ -18,6 +18,11 @@ import PhoneAuth from './Components/Login/PhoneAuth';
 import firebase from 'firebase/compat/app'; 
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
+import Payment from './Components/CheckoutPage/Payment';
+
+
+
+
 
 function App() {
   const firebaseConfig = {
@@ -57,7 +62,13 @@ function App() {
           </RequireAuth>
       
         }></Route>
-        <Route path="/checkoutPage" element={<CheckoutPage></CheckoutPage>}></Route>
+
+        <Route path="/payment/:id" element={
+        
+             <Payment></Payment>
+         
+        }></Route>
+        
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/forgotPassword" element={<ForgotPassword></ForgotPassword>}></Route>

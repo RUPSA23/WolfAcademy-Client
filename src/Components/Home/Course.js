@@ -6,7 +6,6 @@ const Course = ({course}) => {
 
     const handleReadMore = id => {
         navigate(`/courseDetail/${id}`);
-
     }
  
     return (

@@ -27,7 +27,8 @@ const Register = () => {
     }
     
     if(guser){
-        navigate('/phoneAuth');
+        // navigate('/phoneAuth');
+        navigate('/')
     }
     
     let signUpError;

@@ -9,22 +9,21 @@ const PhoneAuth = (props) => {
 
     useEffect(() => {
         const ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(props.auth);
-        ui.start('.firebaseui-auth-container', {
-            callbacks: {
-                signInSuccessWithAuthResult: function(currentUser,authResult, redirectUrl) {
-                    const userId = currentUser.uid; 
-                    // Manually redirect.
-                    window.location.assign(`/users/${userId}`);
-                    // Do not automatically redirect.
-                    return false;
-                }
-            },
-            signInOptions: [{
+         ui.start('.firebaseui-auth-container',  {
+            // callbacks: {
+            //     signInSuccessWithAuthResult: function(currentUser,authResult, redirectUrl) {
+            //         const userId = currentUser.uid; 
+            //         window.location.assign(`/users/${userId}`);
+            //         return false;
+            //     }
+            // },
+            signInOptions:  [{
                 provider:firebase.auth.PhoneAuthProvider.PROVIDER_ID,
                 defaultCountry: 'IN' }],
 
             signInSuccessUrl: '/',
-            signInFlow: 'popup'
+            privacyPolicyUrl: '/',
+            // signInFlow: 'popup'
                 });
     })
 

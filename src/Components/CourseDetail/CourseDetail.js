@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link,  useNavigate,  useParams } from 'react-router-dom';
 
 const CourseDetail = () => {
     const { id } = useParams();
     const [course, setCourse] = useState({});
+
+    const navigate = useNavigate();
+
+    const handleBuyCourse = id => {
+        navigate(`/payment/${id}`)
+    }
+  
 
     useEffect(() => {
         const url = `https://wolfacademy-server-rupsa23.onrender.com/course/${id}`;
@@ -15,6 +22,7 @@ const CourseDetail = () => {
           });
          
       }, []);
+
     return (
         <div>
             <section class="bg-white dark:bg-white">
@@ -57,7 +65,10 @@ const CourseDetail = () => {
 
                     <p class="text-3xl mt-3 mb-3 font-bold text-white dark:text-white">{course.price}</p>
 
-                    <Link to="/checkoutPage" type="button" className="px-8 py-3 font-semibold rounded-full bg-white dark:bg-gray-100 dark:text-gray-800 hover:bg-gray-100">Buy This Course</Link>
+                {/* <Link to="/payment"> */}
+                <button type="button" className="px-8 py-3 font-semibold rounded-full bg-white dark:bg-gray-100 dark:text-gray-800 hover:bg-gray-100" 
+                onClick={() => handleBuyCourse(course._id)}>Buy This Course</button>  
+                {/* </Link> */}
                     
                     <div class="flex items-center justify-between mt-6 md:justify-start">
                     </div>
