@@ -6,7 +6,6 @@ import { loadStripe } from '@stripe/stripe-js';
 import { useAuthState } from "react-firebase-hooks/auth";
 import app from '../../firebase.init';
 import { getAuth } from 'firebase/auth';
-// require('dotenv').config();
 
 const stripePromise = loadStripe('pk_test_51MRIwySBPcNIjIjbxU9XKHqkYiEIOUrk8LIiMYMUSMO7S3sZ2eFTp1NGv3GIy4dhVlveVWbYndRDQMQE9IRPUcAf00YBKY7kE3');
 const auth = getAuth(app);
@@ -31,17 +30,20 @@ const Payment = () => {
         <div>
         <div className="my-12 w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-white dark:border-gray-700 px-10 py-10 mx-auto">
         <h1 className='text-xl font-bold'>Order Summary</h1>
-        <h1 className="text-blue-500 font-bold">Hello {user.displayName ? user.displayName : 'User'}</h1>
+        {/* <h1 className="text-blue-500 font-bold">Hello {user.displayName ? user.displayName : 'User'}</h1> */}
             <h3 className="font-semibold">Pay for {course.name}</h3>
            
             <p>
-            Please Pay <span className="font-bold">{course.price}</span>
+            Please Pay $ <span className="font-bold">{course.price}</span>
           </p>
         </div>
           
             <div>
             <Elements stripe={stripePromise}>
-            <CheckoutPage></CheckoutPage>
+            <CheckoutPage
+            course={course}
+            user={user}
+            ></CheckoutPage>
             </Elements>
             </div>
         </div>
