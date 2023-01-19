@@ -8,34 +8,41 @@ import Loading from '../Shared/Loading';
 const auth = getAuth(app);
 
 const Register = () => {
+    const [displayName, setDisplayName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
 
-    const [signInWithGoogle, guser, gLoading, gError] = useSignInWithGoogle(auth);
+    // const [signInWithGoogle, guser, gLoading, gError] = useSignInWithGoogle(auth);
 
     const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
 
-    if (loading || gLoading) {
+    // if (loading || gLoading) {
+      if (loading) {
         return <Loading></Loading>;
       }
 
     if(user){
-        navigate('/login');
+      navigate('/phoneAuth');
+      // phoneauth func call, params
+        // navigate('/login');
     }
     
-    if(guser){
-        // navigate('/phoneAuth');
-        navigate('/')
-    }
+    // if(guser){
+    //     navigate('/phoneAuth');
+    //     // navigate('/')
+    // }
     
     let signUpError;
-    if (error || gError) {
+    // if (error || gError) {
+    if (error) {
       signUpError = (
         <p className="text-red-500">
-          <small>{error?.message || gError?.message}</small>
+          <small>{error?.message}</small>
+          {/* <small>{error?.message || gError?.message}</small> */}
         </p>
       );
     }
@@ -62,10 +69,16 @@ const Register = () => {
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <form class="space-y-4 md:space-y-6" action="#">
                    <div>
-                      <input type="text" name="name" id="name" placeholder="Name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="true"/>
+                      <input type="text" name="displayName" id="name" placeholder="Name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="true"
+                        value={displayName}
+                     onChange={(e) => setDisplayName(e.target.value)}
+                      />
                   </div>
                   <div>
-                      <input type="text" name="phoneNumber" id="phpneNumber" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Valid Phone Number" required="true"/>
+                      <input type="text" name="phoneNumber" id="phpneNumber" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Valid Phone Number" required="true"
+                         value={phoneNumber}
+                     onChange={(e) => setPhoneNumber(e.target.value)}
+                      />
                   </div>
                   <div>
                       <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email" required="ture"
@@ -88,13 +101,13 @@ const Register = () => {
                       />
                   </div>
                    */}
-                  <button type="submit" class="w-full text-white bg-primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={() => createUserWithEmailAndPassword(email, password)}>Create an account</button>
+                  <button type="submit" class="w-full text-white bg-primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={() => createUserWithEmailAndPassword(email, password, displayName, phoneNumber)}>Create an account</button>
                   <div
             class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
             <p class="text-center font-semibold mx-4 mb-0">Or</p>
           </div>
           {signUpError}
-          <a href="#" class="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100">
+          {/* <a href="#" class="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100">
                 <div class="px-4 py-3">
                     <svg class="h-6 w-6" viewBox="0 0 40 40">
                         <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#FFC107"/>
@@ -105,7 +118,7 @@ const Register = () => {
                  
                 </div>
                 <button class="px-4 py-3 w-5/6 text-center text-gray-600 font-bold" onClick={() => signInWithGoogle()} >Continue with Google</button>
-                </a>
+                </a> */}
                   <p class="text-sm font-semibold text-black-500 dark:text-black-500">
                       Already have an account? <Link to="/login" class="font-medium text-red-700 hover:underline dark:text-primary-500">Login here</Link>
                   </p>
