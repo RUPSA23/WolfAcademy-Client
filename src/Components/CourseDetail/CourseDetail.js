@@ -63,7 +63,7 @@ const CourseDetail = () => {
                     
                     </p>
 
-                    <p class="text-3xl mt-3 mb-3 font-bold text-white dark:text-white">{course.price}</p>
+                    <p class="text-3xl mt-3 mb-3 font-bold text-white dark:text-white">${course.price}</p>
 
                 {/* <Link to="/payment"> */}
                 <button type="button" className="px-8 py-3 font-semibold rounded-full bg-white dark:bg-gray-100 dark:text-gray-800 hover:bg-gray-100" 

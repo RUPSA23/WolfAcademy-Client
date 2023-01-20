@@ -10,7 +10,7 @@ import Footer from './Components/Shared/Footer';
 import Navbar from './Components/Shared/Navbar';
 import AllCourses from './Components/AllCourses/AllCourses';
 import CourseDetail from './Components/CourseDetail/CourseDetail';
-import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
+// import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import ForgotPassword from './Components/Login/ForgotPassword';
 import RequireAuth from './Components/Login/RequireAuth';
@@ -64,9 +64,7 @@ function App() {
         }></Route>
 
         <Route path="/payment/:id" element={
-        
              <Payment></Payment>
-         
         }></Route>
 
         <Route path="/login" element={<Login></Login>}></Route>
